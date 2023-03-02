@@ -213,26 +213,32 @@ body {
     }
 
     section.book-call {
-      background: $blackColor;
-      color: $whiteColor;
-      padding: 1.5em 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-row-gap: 20px;
-      aside {
-        text-align: center;
-        padding: $padding 0;
-        h1 {
-          margin-bottom: $padding;
-        }
-        p {
-          line-height: 28px;
-        }
-        a {
-          @include linkBtn($tomatoColor, $orangeColor);
+      div.container {
+        background: $blackColor;
+        color: $whiteColor;
+
+        padding: 1.2em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        aside {
+          text-align: center;
+          padding: $padding 0;
+          h2 {
+            margin-bottom: $padding;
+          }
+          p {
+            line-height: 28px;
+          }
+          a {
+            @include linkBtn($tomatoColor, $orangeColor);
+          }
         }
       }
     }
+  }
+  footer {
+    padding: 2em 0;
   }
 }
 
