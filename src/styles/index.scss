@@ -45,6 +45,7 @@ body {
   font-size: 18px;
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow-x: hidden;
+  background: $whiteColor;
   svg {
     height: 50px;
     width: 50px;
@@ -143,7 +144,7 @@ body {
     section.about-me {
       display: grid;
       grid-template-columns: 1fr;
-
+      padding: 2.4em 0;
       aside {
         padding: $padding 1.5em;
         text-align: center;
@@ -179,6 +180,9 @@ body {
         flex-wrap: nowrap;
         overflow-x: scroll;
         scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          display: none;
+        }
         img {
           width: 270px;
           height: 180px;
@@ -231,3 +235,5 @@ body {
     }
   }
 }
+
+@import "./mediq_query";
