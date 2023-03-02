@@ -43,7 +43,7 @@ body footer div.container {
 body nav.navigation div.container a,
 body footer div.container a {
   padding: 0.7em 1em;
-  display: block;
+  display: inline-block;
   color: #ffffff;
   background: #030303;
   border-radius: 100vw;
@@ -158,5 +158,40 @@ body main.main div.container.apps div.offer.motion {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+}
+
+body main.main section.about-me {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+body main.main section.about-me aside {
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+body main.main section.about-me aside.writeup h1 {
+  margin-bottom: 1em;
+}
+
+body main.main section.about-me aside.writeup p {
+  line-height: 28px;
+  margin-bottom: 1em;
+}
+
+body main.main section.about-me aside.writeup a {
+  padding: 0.7em 1em;
+  display: inline-block;
+  color: #ffffff;
+  background: #eb7565;
+  border-radius: 100vw;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+body main.main section.about-me aside.writeup a:hover {
+  background: #f6a560;
 }
 /*# sourceMappingURL=index.css.map */
