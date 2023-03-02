@@ -11,7 +11,6 @@ import { useEffect, useRef, useState } from "react";
 
 function App() {
   const sliderRef = useRef(null);
-  const [scrollAmount, setScrollAmount] = useState(0);
   const [mobile, setMobile] = useState(true);
   useEffect(() => {
     if (
@@ -31,30 +30,30 @@ function App() {
     window.addEventListener("resize", (event) => {
       if (window.screen.width > 760) {
         setMobile(false);
+      } else {
+        setMobile(true);
       }
     });
-  }, []);
+  }, [mobile]);
 
   const moveSliderLeft = () => {
     let by = sliderRef.current.scrollLeft - (mobile ? 290 : 560);
-    console.log(by);
+
     sliderRef.current.scrollTo({
       left: by,
       top: 0,
       behaviour: "smooth",
     });
-    setScrollAmount(by);
   };
 
   const moveSliderRight = () => {
     let by = sliderRef.current.scrollLeft + (mobile ? 290 : 560);
-    console.log(by, mobile);
+
     sliderRef.current.scrollTo({
       left: by,
       top: 0,
       behaviour: "smooth",
     });
-    setScrollAmount(by);
   };
   return (
     <>
