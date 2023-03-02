@@ -29,7 +29,7 @@ function App() {
     }
 
     window.addEventListener("resize", (event) => {
-      if (window.screen.width > 700) {
+      if (window.screen.width > 760) {
         setMobile(false);
       }
     });
