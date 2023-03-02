@@ -33,9 +33,9 @@ function App() {
           <div className="offer graphic-design">Graphic Design</div>
           <div className="offer ui-ux">UI/UX</div>
           <div className="offer apps">Apps</div>
+          <div className="offer illustrations">Illustations</div>
           <div className="offer photography">Photography</div>
-          <div className="offer photography">Illustations</div>
-          <div className="offer photography">Motion Graphics</div>
+          <div className="offer motion">Motion Graphics</div>
         </div>
         <section className="about-me">
           <aside className="img">
