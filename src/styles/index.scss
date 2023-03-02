@@ -1,3 +1,14 @@
+$padding: 1em;
+$blueColor: #755cde;
+$orangeColor: #f6a560;
+$pinkColor: #f39e9e;
+$greenColor: #61c4b7;
+$purpleColor: #552049;
+$tomatoColor: #eb7565;
+$blackColor: #030303;
+$grayColor: #7a746e;
+$whiteColor: #fff7f0;
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +17,39 @@
   box-sizing: border-box;
 }
 
+@mixin linkBtn($backgroundColor, $hoverColor) {
+  padding: 0.4em $padding;
+  display: block;
+  color: #ffffff;
+  background: $backgroundColor;
+  border-radius: 100vw;
+  text-decoration: none;
+  &:hover {
+    background: $hoverColor;
+  }
+}
+
+img {
+  max-width: 100%;
+}
 body {
   font-size: 18px;
+  svg {
+    height: 50px;
+    width: 50px;
+  }
+  div.container {
+    padding: $padding;
+  }
+  nav.navigation {
+    div.container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        @include linkBtn($blackColor, $blueColor);
+      }
+    }
+  }
 }
