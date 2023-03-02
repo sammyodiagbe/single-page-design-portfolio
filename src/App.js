@@ -7,8 +7,31 @@ import image2 from "./assets/image-slide-2.jpg";
 import image3 from "./assets/image-slide-3.jpg";
 import image4 from "./assets/image-slide-4.jpg";
 import image5 from "./assets/image-slide-5.jpg";
+import { useRef, useState } from "react";
 
 function App() {
+  const sliderRef = useRef(null);
+  const [scrollAmount, setScrollAmount] = useState(0);
+
+  const moveSliderLeft = () => {
+    let by = scrollAmount - 290;
+    sliderRef.current.scrollTo({
+      left: by,
+      top: 0,
+      behaviour: "smooth",
+    });
+    setScrollAmount(by);
+  };
+
+  const moveSliderRight = () => {
+    let by = scrollAmount + 290;
+    sliderRef.current.scrollTo({
+      left: by,
+      top: 0,
+      behaviour: "smooth",
+    });
+    setScrollAmount(by);
+  };
   return (
     <>
       <nav className="navigation">
@@ -56,18 +79,18 @@ function App() {
         </section>
         <section className="slider">
           <h1>My work</h1>
-          <div className="slider">
-            <img src={image1} alt="slider item" />
-            <img src={image2} alt="slider item" />
-            <img src={image3} alt="slider item" />
-            <img src={image4} alt="slider item" />
-            <img src={image5} alt="slider item" />
+          <div className="slider" ref={sliderRef}>
+            <img src={image1} alt="slider item" className="slider-img" />
+            <img src={image2} alt="slider item" className="slider-img" />
+            <img src={image3} alt="slider item" className="slider-img" />
+            <img src={image4} alt="slider item" className="slider-img" />
+            <img src={image5} alt="slider item" className="slider-img" />
           </div>
           <div className="slider-controller-container">
-            <button className="btn">
+            <button className="btn" onClick={moveSliderLeft}>
               <LeftArrow />
             </button>
-            <button className="btn">
+            <button className="btn" onClick={moveSliderRight}>
               <RightArrow />
             </button>
           </div>
