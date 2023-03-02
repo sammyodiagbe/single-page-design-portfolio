@@ -44,7 +44,7 @@ body footer div.container {
 
 body nav.navigation div.container a,
 body footer div.container a {
-  padding: 0.7em 1em;
+  padding: 0.7em 2.5em;
   display: inline-block;
   color: #ffffff;
   background: #030303;
@@ -185,7 +185,7 @@ body main.main section.about-me aside.writeup p {
 }
 
 body main.main section.about-me aside.writeup a {
-  padding: 0.7em 1em;
+  padding: 0.7em 2.5em;
   display: inline-block;
   color: #ffffff;
   background: #eb7565;
@@ -247,6 +247,11 @@ body main.main section.slider div.slider-controller-container button.btn {
   height: 64px;
   width: 64px;
   border-radius: 64px;
+  cursor: pointer;
+}
+
+body main.main section.slider div.slider-controller-container button.btn:hover {
+  background: #755cde;
 }
 
 body main.main section.slider div.slider-controller-container button.btn:nth-child(1) {
@@ -282,7 +287,7 @@ body main.main section.book-call div.container aside p {
 }
 
 body main.main section.book-call div.container aside a {
-  padding: 0.7em 1em;
+  padding: 0.7em 2.5em;
   display: inline-block;
   color: #ffffff;
   background: #eb7565;

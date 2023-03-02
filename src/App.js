@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   const moveSliderLeft = () => {
-    let by = scrollAmount - (mobile ? 290 : 560);
+    let by = sliderRef.current.scrollLeft - (mobile ? 290 : 560);
     console.log(by);
     sliderRef.current.scrollTo({
       left: by,
@@ -47,7 +47,7 @@ function App() {
   };
 
   const moveSliderRight = () => {
-    let by = scrollAmount + (mobile ? 290 : 560);
+    let by = sliderRef.current.scrollLeft + (mobile ? 290 : 560);
     console.log(by, mobile);
     sliderRef.current.scrollTo({
       left: by,
