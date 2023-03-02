@@ -7,14 +7,37 @@ import image2 from "./assets/image-slide-2.jpg";
 import image3 from "./assets/image-slide-3.jpg";
 import image4 from "./assets/image-slide-4.jpg";
 import image5 from "./assets/image-slide-5.jpg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const sliderRef = useRef(null);
   const [scrollAmount, setScrollAmount] = useState(0);
+  const [mobile, setMobile] = useState(true);
+  useEffect(() => {
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+
+    window.addEventListener("resize", (event) => {
+      if (window.screen.width > 700) {
+        setMobile(false);
+      }
+    });
+  }, []);
 
   const moveSliderLeft = () => {
-    let by = scrollAmount - 290;
+    let by = scrollAmount - (mobile ? 290 : 560);
+    console.log(by);
     sliderRef.current.scrollTo({
       left: by,
       top: 0,
@@ -24,7 +47,8 @@ function App() {
   };
 
   const moveSliderRight = () => {
-    let by = scrollAmount + 290;
+    let by = scrollAmount + (mobile ? 290 : 560);
+    console.log(by, mobile);
     sliderRef.current.scrollTo({
       left: by,
       top: 0,
