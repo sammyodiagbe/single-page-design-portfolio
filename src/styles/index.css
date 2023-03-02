@@ -194,4 +194,51 @@ body main.main section.about-me aside.writeup a {
 body main.main section.about-me aside.writeup a:hover {
   background: #f6a560;
 }
+
+body main.main section.slider {
+  padding: 2em 0;
+}
+
+body main.main section.slider h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+body main.main section.book-call {
+  background: #030303;
+  color: #fff7f0;
+  padding: 1.5em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+
+body main.main section.book-call aside {
+  text-align: center;
+  padding: 1em 0;
+}
+
+body main.main section.book-call aside h1 {
+  margin-bottom: 1em;
+}
+
+body main.main section.book-call aside p {
+  line-height: 28px;
+}
+
+body main.main section.book-call aside a {
+  padding: 0.7em 1em;
+  display: inline-block;
+  color: #ffffff;
+  background: #eb7565;
+  border-radius: 100vw;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+body main.main section.book-call aside a:hover {
+  background: #f6a560;
+}
 /*# sourceMappingURL=index.css.map */

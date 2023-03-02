@@ -55,6 +55,7 @@ function App() {
           </aside>
         </section>
         <section className="slider">
+          <h1>My work</h1>
           <div className="slider">
             <img src={image1} alt="slider item" />
             <img src={image2} alt="slider item" />
@@ -72,14 +73,19 @@ function App() {
           </div>
         </section>
         <section className="book-call">
-          <aside>
-            <h2>Book a call with me</h2>
-            <p>
-              I'd love to have a chat to see how I can help you. The best first
-              step is for us to discuss your project during a free consultation.
-              Then we can move forward from there.
-            </p>
-          </aside>
+          <div className="container">
+            <aside>
+              <h2>Book a call with me</h2>
+              <p>
+                I'd love to have a chat to see how I can help you. The best
+                first step is for us to discuss your project during a free
+                consultation. Then we can move forward from there.
+              </p>
+            </aside>
+            <aside>
+              <a href="#book-call">Free Consultation</a>
+            </aside>
+          </div>
         </section>
       </main>
       <footer className="navigation">
