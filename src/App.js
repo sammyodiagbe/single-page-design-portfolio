@@ -14,7 +14,7 @@ function App() {
       <nav className="navigation">
         <div className="container">
           <Logo />
-          <a href="#consultant" className="btn">
+          <a href="#free-consultation" className="btn">
             Free Consultation
           </a>
         </div>
@@ -49,7 +49,7 @@ function App() {
               mobile apps. I'm handy with a camera!
             </p>
 
-            <a href="#" className="btn">
+            <a href="#free-consolation" className="btn">
               Free Consultation
             </a>
           </aside>
